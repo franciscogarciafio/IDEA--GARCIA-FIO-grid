@@ -1,0 +1,861 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(253, 246, 236);
+}
+
+/*maquetado de estructura en grid*/
+
+.contenedor{
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "cabecera"
+                         "ventas_destacadas"
+                         "alquileres_destacados"
+                         "pieDePaguina";
+
+     font-size: 1rem;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+
+/*estilos al header*/
+
+.cabecera{
+    grid-area: cabecera;
+    background-color:rgb(218, 184, 139);
+    display: grid;
+    grid-template-areas: "logo"
+                         "menu";
+     
+    position: sticky;
+    top: 0;
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+    
+}
+.logo{
+    grid-area: logo;
+    height: 20vh;
+}
+header div{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+header div img{
+    height: 100%;
+    width: 30vh;
+    border-radius: 10px;
+
+}
+header div a{
+    height: 100%;
+    width: 100%;
+}
+.menu{
+    grid-area: menu;
+}
+.menu{
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 0.4rem;
+    text-decoration: none;
+         
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: rgb(78, 61, 16);
+    font-family: monospace;
+    border-radius: 10px;
+    font-weight: bold;
+    
+}
+
+/*estilos section1*/
+
+.ventas_destacadas{
+    grid-area: ventas_destacadas;
+    text-align: center;
+    color: black; 
+}
+
+.ventas_destacadas{
+    padding: 0.2rem;
+    display: grid;
+    grid-template-areas: "ventas_titulo"
+                         "ventas_propiedad1"
+                         "ventas_propiedad2"
+                         "ventas_propiedad3"
+                         "ventas_video"
+                         "ventas_descripcion"
+                         "ventas_lista";
+    text-align: center;
+    color: black;
+}
+
+.ventas_titulo{
+    grid-area: ventas_titulo;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: rgb(243, 233, 221);
+     
+}
+.ventas_propiedad1{
+    grid-area: ventas_propiedad1; 
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.4rem;
+
+
+}
+.ventas_propiedad2{
+    grid-area: ventas_propiedad2;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.4rem; 
+}
+.ventas_propiedad3{
+    grid-area: ventas_propiedad3;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.3rem; 
+    
+}
+
+.ventas_video{
+    grid-area: ventas_video;
+    border-radius: 2rem;
+    justify-self: center;
+}
+.ventas_descripcion{
+    grid-area: ventas_descripcion;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    font-size: 1.2rem;
+}
+.ventas_lista{
+    grid-area: ventas_lista;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 1rem;
+    margin: 0.1rem;
+}
+
+/*estilos section2*/
+
+.alquileres_destacados{
+    grid-area: alquileres_destacados;
+}
+
+.alquileres_destacados{
+    
+    padding: 0.2rem;
+    display: grid;
+    grid-template-areas: "alquileres_titulo"
+                         "alquileres_propiedad1"
+                         "alquileres_propiedad2"
+                         "alquileres_propiedad3"
+                         "alquileres_imagen"
+                         "alquileres_descripcion"
+                         "alquileres_servicios"
+                         "alquileres_lista";
+    text-align: center;
+}
+
+.alquileres_titulo{
+    grid-area: alquileres_titulo;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: rgb(243, 233, 221);
+    
+}
+
+.alquileres_propiedad1{
+    grid-area: alquileres_propiedad1;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.4rem;
+    
+}
+.alquileres_propiedad2{
+    grid-area: alquileres_propiedad2;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.4rem;
+    
+}
+.alquileres_propiedad3{
+    grid-area: alquileres_propiedad3;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.2rem;
+    
+}
+.alquileres_imagen{
+    grid-area: alquileres_imagen;
+    border-radius: 2rem;
+    justify-self: center;
+
+    
+    
+}
+.alquileres_descripcion{
+    grid-area: alquileres_descripcion;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    font-size: 1.2rem;
+    
+}
+.alquileres_servicios{
+    grid-area: alquileres_servicios; 
+    margin: 0.1rem;
+    padding: 0.1rem;
+    font-size: 1.2rem; 
+}
+.alquileres_lista{
+    grid-area: alquileres_lista;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 1rem;
+    margin: 0.1rem;       
+}
+
+/*estilos a footer*/
+.pieDePaguina{
+    grid-area: pieDePaguina;
+    background-color: rgb(183, 202, 219);
+    display: grid;
+    grid-template-areas: "logo_fin"
+                         "footer_inmo";
+      
+    font-size: 0.6rem;
+    gap: 0.5rem;
+    
+}
+.logo_fin{
+    grid-area: logo_fin;
+    display: flex;
+    justify-content: center;
+}
+.logo_fin1{
+    height: 18vh;
+    margin: 0.1rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.footer_inmo{
+    grid-area: footer_inmo;
+    text-align: center;
+    margin: 0.2rem;
+    
+
+}
+.footer_colegio{
+    grid-area: footer_colegio;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    
+}
+.autor{
+    grid-area: autor;
+    margin: 0.1rem;
+    padding: 0.1rem;
+
+}
+.footer_nombre{
+    margin: 0.1rem;
+    padding: 0.1rem;
+}
+
+/*estilos para html nosotros*/
+
+.seccion_nosotros{
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "titulo_nosotros"
+                         "imagen_nosotros"
+                         "parrafo_nosotros"
+                         "equipo"
+                         "imagen_staff"
+                         "parrafo_staff";
+
+     font-size: 1rem;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+.titulo_nosotros{
+    grid-area: titulo_nosotros;
+    text-align: center;
+    font-size: 2rem;
+}
+.imagen_nosotros{
+     grid-area: imagen_nosotros;
+     border-radius: 2rem;
+     margin:1rem;
+     padding: 1rem;
+    
+
+}
+.parrafo_nosotros{
+    grid-area: parrafo_nosotros;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+}
+.equipo{
+    grid-area: equipo;
+    text-align: center;
+    font-size: 2rem;
+}
+.imagen_staff{
+    grid-area: imagen_staff;
+    border-radius: 2rem;
+    margin:1rem;
+    padding: 1rem;
+}
+.parrafo_staff{
+    grid-area: parrafo_staff;
+    font-size: 1rem;
+}
+
+
+/*estilo para html ventas y alquileres*/
+
+.contenedor_ventas{
+    padding: 0.2rem;
+    display: grid;
+    grid-template-areas: "cabecera"
+                         "seccion_ventas"
+                         "pieDePaguina";
+    gap: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+    ;                     
+}
+.cabecera{
+    grid-area: cabecera;
+}
+.seccion_ventas{
+    grid-area: seccion_ventas;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+.titulo_ventas{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: rgb(240, 219, 192)
+}
+.imagenes_ventas{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 70vh;
+    height: 50vh;
+    border-radius: 1rem;
+}
+.ventas_propiedad1{
+    background-color: rgb(181, 167, 112);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 2rem;
+}
+.ventas_propiedad2{
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+.pieDePaguina{
+    grid-area: pieDePaguina;
+}
+.alquileres_servicios{
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin: 0.7rem;
+}
+
+.formulario{
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        background-color: rgb(181, 167, 112);
+        border-radius: 1rem;
+        text-align: center;
+        
+}
+
+.datos{
+    
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    
+}
+.cuadro_info{
+    background-color: rgb(222, 222, 213);
+    width: 80%;
+    height: 2rem;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 0.6rem;
+    font-size: 1.2rem;
+}
+.cuadro_info2{
+    background-color: rgb(222, 222, 213);
+    width: 80%;
+    height: 10rem;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    border-radius: 0.6rem;
+    font-size: 1.2rem;
+}
+
+.seccion_contactos{
+    display: grid;
+    gap: 1rem; 
+    grid-template-areas: "titulo_ventas"
+                         "contacto_oficina"
+                         "contacto_ubicacion"
+                         "consulta"
+                         "formulario";
+}
+.titulo_ventas{
+    grid-area: titulo_ventas;
+    text-align: center;
+
+}
+.contacto_oficina{
+    grid-area: contacto_oficina;
+    background-image:url(imagencontacto.jpg);
+    text-align: center;
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 1.4rem;
+    margin: 0.1rem;
+    padding: 0.1rem;
+
+}
+.contacto_ubicacion{
+    grid-area: contacto_ubicacion;
+    margin: 1rem;
+    padding: 1rem;
+    width: 80vh;
+    height: 60vh;
+    border-radius: 1rem;
+    
+}
+
+.consulta{
+    grid-area: consulta;
+}
+.formulario{
+    grid-area: formulario;
+}
+
+
+/*estilos de vista para tablet*/
+
+@media screen and (min-width:768px) {
+    .cabecera{
+            grid-area: cabecera;
+            background-color:rgb(218, 184, 139);
+            grid-template-areas: "logo menu";
+            height: 20vh;
+        }
+        
+        .logo{
+            grid-area: logo;
+            width: 40vh;
+            
+        }
+        .header div img{
+            width: 40vh;
+            height: 30vh   
+           
+        }
+        .menu{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+           
+        .menu ul li{
+            font-size: 1rem;
+            margin: 0.8rem;    
+            justify-content: center;
+            text-align: center;
+        }
+
+
+
+    .ventas_destacadas{
+        display: grid;
+        grid-template-areas: "ventas_titulo ventas_titulo"
+                             "ventas_propiedad1 ventas_propiedad1"
+                             "ventas_propiedad2 ventas_propiedad2"
+                             "ventas_propiedad3 ventas_propiedad3"
+                             "ventas_video ventas_descripcion"
+                             "ventas_video ventas_lista";
+        
+    }
+    .ventas_video{
+        height: 60vh;
+        width: 80vh;
+        margin: 2rem;
+    }
+    .ventas_descripcion{
+        margin: 2rem;
+    }
+
+    .alquileres_destacados{
+        display: grid;
+        grid-template-areas: "alquileres_titulo alquileres_titulo"
+                             "alquileres_propiedad1 alquileres_propiedad1"
+                             "alquileres_propiedad2 alquileres_propiedad2"
+                             "alquileres_propiedad3 alquileres_propiedad3"
+                             "alquileres_imagen alquileres_descripcion"           
+                             "alquileres_imagen alquileres_servicios"
+                             "alquileres_imagen alquileres_lista";
+        
+    }
+    .alquileres_imagen{
+        height: 60vh;
+        width: 80vh;
+        margin: 2rem;
+    }
+    .alquileres_descripcion{
+        margin: 1rem;
+    }
+
+    .pieDePaguina{
+        font-size: 0.7rem;
+    }
+    header div img{
+        height: 90%;
+    }
+    .logo_fin{
+        height: 12VH;
+    }
+    /*footer para tablet*/
+    .pieDePaguina{
+        grid-area: pieDePaguina;
+        background-color: rgb(183, 202, 219);
+        display: grid;
+        display: grid;
+        grid-template-areas: "logo_fin footer_inmo";
+        font-size: 0.6rem;
+        height: 20vh;
+    }
+    .logo_fin{
+        grid-area: logo_fin;
+        height: 20vh;
+        margin: 0.1rem;
+        padding: 0.3rem;
+        border-radius: 1rem;
+    }
+    .footer_inmo{
+        grid-area: footer_inmo;
+        text-align: end;
+        margin-top: 3rem;
+    }
+    
+    
+
+    /*estilo de html nosotros para tablet*/
+    .seccion_nosotros{
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: "titulo_nosotros"
+                             "imagen_nosotros"
+                             "parrafo_nosotros"
+                             "equipo"
+                             "imagen_staff"
+                             "parrafo_staff";
+    
+         font-size: 2rem;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    }
+    .titulo_nosotros{
+        grid-area: titulo_nosotros;
+        text-align: center;
+        font-size: 3rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+    .imagen_nosotros{
+         grid-area: imagen_nosotros;
+         border-radius: 2rem;
+         height: 60vh;
+         width: 80vh;
+         margin: 2rem;
+        
+        
+    
+    }
+    .parrafo_nosotros{
+        grid-area: parrafo_nosotros;
+        font-size: 1.5rem;
+        margin:1rem;
+        padding: 1rem;
+    }
+    .equipo{
+        grid-area: equipo;
+        text-align: center;
+        font-size: 2rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+    .imagen_staff{
+        grid-area: imagen_staff;
+        border-radius: 2rem;
+        height: 60vh;
+        width: 80vh;
+        margin: 2rem;
+        
+
+    }
+    .parrafo_staff{
+        grid-area: parrafo_staff;
+        font-size: 1.5rem;
+        margin:1rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .cabecera{
+        height: 20vh;
+    }
+    
+    .menu{
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    
+    .menu ul li{
+        font-size: 1.3rem;
+        margin: 0.9rem;    
+    }
+    .menu ul li a:hover{
+        color: beige;
+        font-weight: bold;
+    }
+
+    .ventas_video{
+        height: 100vh;
+        width: 100vh;
+        margin: 2rem;
+    }
+    
+    .ventas_titulo{
+        
+        padding: 0.8rem;
+        margin: 0.8rem;
+        font-size: 2.3rem;
+    }
+    .ventas_propiedad1{
+         
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: 2rem;
+    
+    
+    }
+    .ventas_propiedad2{
+        
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: 1.8rem; 
+    }
+    .ventas_propiedad3{
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: 1.8rem; 
+        
+    }
+    
+    .ventas_descripcion{
+        
+        margin: 2rem;
+        padding: 2rem;
+        font-size: 1.8rem;
+        
+    
+    }
+    .ventas_lista{
+        font-size: 1.5rem;
+        margin: 0.3rem;
+        
+    }
+    
+    .alquileres_titulo{
+        padding: 0.8rem;
+        margin: 0.8rem;
+        font-size: 2.3rem;
+        
+    }
+    
+    .alquileres_propiedad1{
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: 2rem;
+        
+    }
+    .alquileres_propiedad2{
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: 1.8rem;
+        
+    }
+    .alquileres_propiedad3{
+        padding: 0.5rem;
+        margin: 0.5rem;
+        font-size: 1.8rem;
+        
+    }
+    .alquileres_imagen{
+        height: 100vh;
+        width: 100vh;
+        margin: 2rem;  
+    }
+    .alquileres_descripcion{
+        margin: 2rem;
+        padding: 2rem;
+        font-size: 1.8rem;
+        
+    }
+    .alquileres_servicios{
+        grid-area: alquileres_servicios; 
+        margin: 0.3rem;
+        padding: 0.3rem;
+        font-size: 1.8rem; 
+    }
+    .alquileres_lista{
+        font-size: 1.5rem;
+        margin: 0.3rem;       
+    }
+    
+    /*estilo de footer*/
+
+    .logo_fin{;
+        margin: 0.2rem;
+        padding: 0.2rem;
+        
+    }
+    .logo_fin1{
+        height: 25vh;
+        margin: 0.1rem;
+        padding: 0.3rem;
+        border-radius: 1rem;
+    }
+    .pieDePaguina{
+        font-size: 1.2rem;
+        height: 30vh;
+    }
+
+
+    /*estilo de html nosotros */
+    .seccion_nosotros{
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "titulo_nosotros titulo_nosotros"
+                         "imagen_nosotros parrafo_nosotros"
+                         "equipo equipo"
+                         "imagen_staff parrafo_staff";
+    
+     font-size: 2rem;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    }
+    .titulo_nosotros{
+    grid-area: titulo_nosotros;
+    }
+    .imagen_nosotros{
+     grid-area: imagen_nosotros;
+     height: 80vh;
+     width: 80vh;
+    }
+   .parrafo_nosotros{
+    grid-area: parrafo_nosotros;
+    font-size: 1.5rem;
+    margin:1rem;
+    padding: 1rem;
+    }
+    .equipo{
+    grid-area: equipo;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    }
+     .imagen_staff{
+    grid-area: imagen_staff;
+    border-radius: 2rem;
+    height: 60vh;
+    width: 80vh;
+    margin: 2rem;
+    
+     }
+   .parrafo_staff{
+    grid-area: parrafo_staff;
+    font-size: 1.5rem;
+    margin:1rem;
+    padding: 1rem;
+   }
+
+
+    .seccion_ventas{
+    display: grid;
+    grid-template-areas: "titulo_ventas titulo_ventas"
+                         "ventas_propiedad1 ventas_propiedad1" 
+                         "ventas_propiedad2 ventas_propiedad2"
+                         "ventas_propiedad3 ventas_propiedad3"
+                         "imagenes_ventas ventas_descripcion"
+                         "imagenes_ventas ventas_lista"
+                         ;
+    }
+   .titulo_ventas{
+    grid-area: titulo_ventas;
+    }
+    .ventas_propiedad1{
+    grid-area: ventas_propiedad1;
+   }
+    .ventas_propiedad2{
+    grid-area: ventas_propiedad2;
+   }
+    .ventas_propiedad3{
+    grid-area: ventas_propiedad3;
+    }
+   .imagenes_ventas{
+    grid-area: imagenes_ventas;
+    }
+   .ventas_descripcion{
+    grid-area:  ventas_descripcion;
+    }
+    .ventas_lista{
+    grid-area: ventas_lista;
+    }
+
+
+}

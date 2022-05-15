@@ -1,0 +1,634 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estiolo de header*/
+.cabecera{
+    margin-bottom: 0.5rem;
+}
+
+.cabecera{
+    background-color:rgb(218, 184, 139);
+    display: flex;
+    justify-content: space-between;   
+    position: sticky;
+    top: 0;
+    height: 10vh;
+}
+/*estilos del logo*/
+header div img{ 
+    height: 90%;
+    width: 90%;
+    margin: 0.1rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+/*estilos del menu*/
+.menu{
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+.menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 0.4rem;
+    text-decoration: none;
+         
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: rgb(78, 61, 16);
+    font-family: monospace;
+    border-radius: 10px;
+    font-weight: bold;
+    
+}
+
+.menu ul li a:hover{
+    color: beige;
+    font-weight: bold;
+}
+
+/*estilo de section 1*/
+
+.ventas_destacadas{
+    padding: 0.2rem;
+    display: grid;
+    grid-template-areas: "ventas_titulo"
+                         "ventas_propiedad1"
+                         "ventas_propiedad2"
+                         "ventas_propiedad3"
+                         "ventas_video"
+                         "ventas_descripcion"
+                         "ventas_lista";
+    text-align: center;
+}
+
+.ventas_titulo{
+    grid-area: ventas_titulo;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: rgb(243, 233, 221);
+     
+}
+.ventas_propiedad1{
+    grid-area: ventas_propiedad1; 
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.4rem;
+
+
+}
+.ventas_propiedad2{
+    grid-area: ventas_propiedad2;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.4rem; 
+}
+.ventas_propiedad3{
+    grid-area: ventas_propiedad3;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.3rem; 
+    
+}
+
+.ventas_video{
+    grid-area: ventas_video;
+    border-radius: 2rem;
+    justify-self: center;
+}
+.ventas_descripcion{
+    grid-area: ventas_descripcion;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    font-size: 1.2rem;
+}
+.ventas_lista{
+    grid-area: ventas_lista;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 1rem;
+    margin: 0.1rem;
+}
+
+/*
+.ventas_destacadas{
+    background-color: E6DF9A;
+    text-align: center;
+    color: black;
+    margin: 60px 10px 10px 10px;
+    font-size: 40px; 
+    font-family: 'Roboto', sans-serif;
+     
+}
+.ventas_titulo{
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.ventas_propiedad{
+    margin: 100px 10px 10px 10px;
+    padding: 10px;
+    font-size: 35px;
+    
+      
+}
+
+.ventas_precio{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.ventas_ubicacion{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    
+}
+
+.ventas_video{
+    border-radius: 80px; 
+    width: 500px;
+    height: 400px;
+    margin: 5px 5px;
+    padding: 5px 5px;   
+}
+
+.ventas_descripcion{
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+
+}
+
+.ventas_lista{
+    list-style-type: none;
+    font-size: 25px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+/*estilo de section2*/
+
+.alquileres_destacados{
+    
+    padding: 0.2rem;
+    display: grid;
+    grid-template-areas: "alquileres_titulo"
+                         "alquileres_propiedad1"
+                         "alquileres_propiedad2"
+                         "alquileres_propiedad3"
+                         "alquileres_imagen"
+                         "alquileres_descripcion"
+                         "alquileres_servicios"
+                         "alquileres_lista";
+    text-align: center;
+}
+
+.alquileres_titulo{
+    grid-area: alquileres_titulo;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: rgb(243, 233, 221);
+    
+}
+
+.alquileres_propiedad1{
+    grid-area: alquileres_propiedad1;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.4rem;
+    
+}
+.alquileres_propiedad2{
+    grid-area: alquileres_propiedad2;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.4rem;
+    
+}
+.alquileres_propiedad3{
+    grid-area: alquileres_propiedad3;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 1.2rem;
+    
+}
+.alquileres_imagen{
+    grid-area: alquileres_imagen;
+    border-radius: 2rem;
+    justify-self: center;
+
+    
+    
+}
+.alquileres_descripcion{
+    grid-area: alquileres_descripcion;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    font-size: 1.2rem;
+    
+}
+.alquileres_servicios{
+    grid-area: alquileres_servicios; 
+    margin: 0.1rem;
+    padding: 0.1rem;
+    font-size: 1.2rem; 
+}
+.alquileres_lista{
+    grid-area: alquileres_lista;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 1rem;
+    margin: 0.1rem;       
+}
+
+/* .alquileres_destacados{
+    text-align: center;
+    color: black;
+    padding: 50px;
+    margin: 35px;
+    font-size: 40px; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.alquileres_titulo{
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.alquileres_propiedad{
+    margin: 100px 10px 10px 10px;
+    padding: 10px;
+    font-size: 35px;
+   
+   
+   
+}
+
+.alquileres_precio{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.alquileres_ubicacion{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.alquileres_imagen{
+    border-radius: 80px; 
+    width: 500px;
+    height: 400px;
+    margin: 5px 5px;
+    padding: 5px 5px;   
+}
+
+.alquileres_descripcionUno{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.alquileres_descripcionDos{
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.alquileres_servicios{
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;   
+}
+
+
+.alquileres_lista{
+    list-style-type: none;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+*/
+
+/*estilos del footer
+
+.pieDePaguina{ 
+    background-color:E6DF9A; 
+    color: antiquewhite;
+    padding: 10px;
+    text-align: end;
+}
+
+footer div img{
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+}
+
+.autor{
+    text-align: start;
+}
+*/
+.pieDePaguina{
+    background-color: rgb(183, 202, 219);
+    display: grid;
+    grid-template-areas: "logo_fin footer_nombre"
+                        "logo_fin footer_colegio"
+                        "logo_fin autor";
+   
+    font-size: 0.5rem;
+}
+
+.logo_fin{
+    grid-area: logo_fin;
+    height: 40px;
+    margin: 0.1rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.footer_nombre{
+    grid-area: footer_nombre;
+    text-align: end;
+    margin: 0.2rem;
+    
+
+}
+.footer_colegio{
+    grid-area: footer_colegio;
+    text-align: end;
+    margin: 0.2rem;
+    
+}
+.autor{
+    grid-area: autor;
+    text-align: end;
+    margin: 0.2rem;
+}
+
+
+
+/*estilos de html ventas*/
+
+.seccion_ventas{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; 
+}
+
+.titulo_ventas{
+    text-align: center;
+    color: black;
+    margin: 30px;
+    padding: 20px;
+    font-size: 50px;
+    text-transform: uppercase;
+    
+}
+.imagenes_ventas{
+    border-radius: 80px; 
+    width: 700px;
+    height: 500px;
+    margin: 15px 15px;
+    padding: 15px 15px;   
+}
+
+.descripcion_ventas{
+    margin: 20px;
+    padding: 15px;
+
+}
+
+/*estilos de html alquileres*/
+
+.seccion_alquileres{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; 
+}
+
+.titulo_alquileres{
+    text-align: center;
+    color: black;
+    margin: 30px;
+    padding: 20px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.descripcion_alquileres{
+    text-align: center;
+}
+
+.imagenes_alquileres{
+    border-radius: 80px; 
+    width: 700px;
+    height: 500px;
+    margin: 15px 15px;
+    padding: 15px 15px;   
+}
+
+.composicion_alquileres{
+    margin: 2px;
+    padding: 2px;
+    font-size: 25px;
+}
+.lista_composicion{
+    margin: 10px;
+    padding: 10px;
+    list-style-type: disc;
+    display: inline-block;
+}
+.servicios_titulo{
+    margin: 5px;
+    padding: 5px;
+    font-size: 25px;
+}
+.lista_servicios{
+    margin: 5px;
+    padding: 5px;
+    list-style-type: disc;
+    display: inline-block;
+}
+
+/*estilos de html tasaciones*/
+
+.seccion_tasaciones{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; 
+}
+
+.titulo_tasaciones{
+    text-align: center;
+    color: black;
+    margin: 30px;
+    padding: 20px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.parrafo_tasaciones{
+    margin: 5px;
+    padding: 5px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+.formulario{
+    margin: 50px;
+    padding: 20px;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    
+    
+}
+.datos{
+    margin: 20px;
+    padding: 20px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+form fieldset div input{
+    margin: 20px;
+    padding: 20px;
+    font-size: 15px;    
+    text-align: center;
+    border-radius: 50px;
+
+}
+
+.mensaje{
+    width: 500px;
+    height: 300px;
+}
+
+/*estilos de html nosotros*/
+
+.seccion_nosotros{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; 
+}
+.titulo_nosotros{
+    text-align: center;
+    color: black;
+    margin: 30px;
+    padding: 20px;
+    font-size: 50px;
+    text-transform: uppercase;      
+}
+.imagen_nosotros{
+    border-radius: 80px;
+    width: 700px;
+    height: 500px;
+    margin: 15px 15px;
+    padding: 15px 15px; 
+    
+}
+.staff{
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-transform: uppercase; 
+}
+
+.parrafo_nosotros{
+    margin:20px;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+/*estilos de html contacto*/
+
+.seccion_contacto{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; 
+}
+.nuestra_oficina{
+    text-align: center;
+    color: black;
+    margin: 30px;
+    padding: 20px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.mapa{
+    border-radius: 20px;
+    width: 900px;
+    height: 500px;
+    margin: 10px 10px;
+    padding: 10px 10px; 
+}
+.direccion_contacto{
+    margin: 1px 1px;
+    padding: 1px 1px;
+     
+}
+.contactanos{
+    margin: 40px 20px 10px 20px;
+    padding: 20px 20px 5px 20px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.consulta{
+    margin:20px;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
