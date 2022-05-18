@@ -452,8 +452,8 @@ header div a{
     font-size: 1.4rem;
     margin: 0.1rem;
     padding: 0.1rem;
-
 }
+
 .contacto_ubicacion{
     grid-area: contacto_ubicacion;
     margin: 1rem;
@@ -461,6 +461,7 @@ header div a{
     width: 80vh;
     height: 60vh;
     border-radius: 1rem;
+    
     
 }
 
@@ -640,6 +641,10 @@ header div a{
         margin:1rem;
         padding: 1rem;
     }
+    .contacto_ubicacion{
+        width: 140vh;
+        height: 80vh;
+    }
 }
 
 @media screen and (min-width:1200px) {
@@ -661,6 +666,9 @@ header div a{
     .menu ul li a:hover{
         color: beige;
         font-weight: bold;
+        background-color: rgb(111, 28, 28);
+        
+
     }
 
     .ventas_video{
@@ -856,6 +864,16 @@ header div a{
     .ventas_lista{
     grid-area: ventas_lista;
     }
+    .contacto_ubicacion{
+        width: 200vh;
+        height: 80vh;
+    }
 
+    .ventas_titulo:hover{  
+      animation-iteration-count: infinite;
+ }
+    .alquileres_titulo:hover{
+        animation-iteration-count: infinite;
 
+ }
 }
