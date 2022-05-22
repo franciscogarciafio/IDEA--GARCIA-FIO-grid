@@ -4,83 +4,53 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     background-color: rgb(253, 246, 236);
 }
 
-/*maquetado de estructura en grid*/
-
-.contenedor{
-    display: grid;
-    gap: 1rem;
-    grid-template-areas: "cabecera"
-                         "ventas_destacadas"
-                         "alquileres_destacados"
-                         "pieDePaguina";
-
-     font-size: 1rem;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;   
+/*estilos al header*/
+/*estilos en bs para header*/
+header{
+    position: sticky;
+    top: 0;  
+    z-index: 1; 
 }
 
-/*estilos al header*/
-
-.cabecera{
-    grid-area: cabecera;
-    background-color:rgb(218, 184, 139);
-    display: grid;
-    grid-template-areas: "logo"
-                         "menu";
+.container-fluid{
+    background-color: rgb(218, 184, 139); 
      
-    position: sticky;
-    top: 0;
-    height: 30vh;
-    width: 100%;
-    text-align: center;
     
 }
+
+.navbar{
+    padding: 0;
+    margin-left: auto;
+}
+
+.logo{
+   margin: 1rem;   
+}
+
+.navbar-toggler{
+    background-color: rgb(222, 211, 194);
+}
+
+.nav-item :hover{
+    background-color: rgb(164, 97, 72);
+    font-weight: bold;
+    border-radius: 1rem;  
+}
+
+#navbarSupportedContent{
+    background-color:  rgb(218, 184, 139);
+}
+
 .logo{
     grid-area: logo;
-    height: 20vh;
 }
-header div{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-}
+
 header div img{
-    height: 100%;
-    width: 30vh;
     border-radius: 10px;
-
-}
-header div a{
-    height: 100%;
-    width: 100%;
-}
-.menu{
-    grid-area: menu;
-}
-.menu{
-    margin: 0.2rem;
-    padding: 0.2rem;
-}
-.menu ul li{
-    list-style-type: none;
-    display: inline-block;
-    font-size: 0.8rem;
-    margin: 0.4rem;
-    text-decoration: none;
-         
-}
-
-.menu ul li a{
-    text-decoration: none;
-    color: rgb(78, 61, 16);
-    font-family: monospace;
-    border-radius: 10px;
-    font-weight: bold;
-    
 }
 
 /*estilos section1*/
@@ -90,7 +60,6 @@ header div a{
     text-align: center;
     color: black; 
 }
-
 .ventas_destacadas{
     padding: 0.2rem;
     display: grid;
@@ -112,7 +81,8 @@ header div a{
     font-size: 1.4rem;
     text-transform: uppercase;
     background-color: rgb(243, 233, 221);
-     
+    
+       
 }
 .ventas_propiedad1{
     grid-area: ventas_propiedad1; 
@@ -243,7 +213,6 @@ header div a{
     display: grid;
     grid-template-areas: "logo_fin"
                          "footer_inmo";
-      
     font-size: 0.6rem;
     gap: 0.5rem;
     
@@ -445,7 +414,7 @@ header div a{
     grid-area: contacto_oficina;
     background-image:url(imagencontacto.jpg);
     text-align: center;
-    height: 30vh;
+    height: 35vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -453,7 +422,9 @@ header div a{
     margin: 0.1rem;
     padding: 0.1rem;
 }
-
+.numero_tel{
+    color: rgb(232, 247, 158);
+}
 .contacto_ubicacion{
     grid-area: contacto_ubicacion;
     margin: 1rem;
@@ -476,38 +447,6 @@ header div a{
 /*estilos de vista para tablet*/
 
 @media screen and (min-width:768px) {
-    .cabecera{
-            grid-area: cabecera;
-            background-color:rgb(218, 184, 139);
-            grid-template-areas: "logo menu";
-            height: 20vh;
-        }
-        
-        .logo{
-            grid-area: logo;
-            width: 40vh;
-            
-        }
-        .header div img{
-            width: 40vh;
-            height: 30vh   
-           
-        }
-        .menu{
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-           
-        .menu ul li{
-            font-size: 1rem;
-            margin: 0.8rem;    
-            justify-content: center;
-            text-align: center;
-        }
-
-
 
     .ventas_destacadas{
         display: grid;
@@ -646,31 +585,13 @@ header div a{
         height: 80vh;
     }
 }
-
+/* estilos para destblok*/
 @media screen and (min-width:1200px) {
 
-    .cabecera{
-        height: 20vh;
+    .navbar-nav{
+        font-size: 2rem;
+        margin-left: auto;
     }
-    
-    .menu{
-        margin: 0.5rem;
-        padding: 0.5rem;
-    }
-    
-    
-    .menu ul li{
-        font-size: 1.3rem;
-        margin: 0.9rem;    
-    }
-    .menu ul li a:hover{
-        color: beige;
-        font-weight: bold;
-        background-color: rgb(111, 28, 28);
-        
-
-    }
-
     .ventas_video{
         height: 100vh;
         width: 100vh;
@@ -767,10 +688,9 @@ header div a{
     
     /*estilo de footer*/
 
-    .logo_fin{;
+    .logo_fin{
         margin: 0.2rem;
-        padding: 0.2rem;
-        
+        padding: 0.2rem;  
     }
     .logo_fin1{
         height: 25vh;
@@ -859,7 +779,7 @@ header div a{
     grid-area: imagenes_ventas;
     }
    .ventas_descripcion{
-    grid-area:  ventas_descripcion;
+    grid-area: ventas_descripcion;
     }
     .ventas_lista{
     grid-area: ventas_lista;
@@ -874,6 +794,8 @@ header div a{
  }
     .alquileres_titulo:hover{
         animation-iteration-count: infinite;
-
+ }
+ .carousel{
+     margin: 1rem;
  }
 }
