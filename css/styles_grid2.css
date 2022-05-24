@@ -265,7 +265,7 @@ header div img{
                          "parrafo_staff";
 
      font-size: 1rem;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;   
+       
 }
 .titulo_nosotros{
     grid-area: titulo_nosotros;
@@ -413,14 +413,16 @@ header div img{
     grid-area: contacto_oficina;
     background-image:url(imagencontacto.jpg);
     text-align: center;
+    width: 100%;
     height: 35vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     font-size: 1.4rem;
-    margin: 0.1rem;
-    padding: 0.1rem;
+    margin:0 auto;
+    padding: 0.1rem; 
 }
+
 .numero_tel{
     color: rgb(232, 247, 158);
 }
